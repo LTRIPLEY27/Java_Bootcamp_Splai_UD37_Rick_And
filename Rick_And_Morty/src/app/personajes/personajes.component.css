@@ -1,0 +1,34 @@
+.body {
+  height: auto 0px;
+  width: auto 0px;
+}
+
+main {
+  background-color: black;
+  padding: 10%;
+}
+
+#title {
+  text-align: center;
+  font-family: 'Courier New';
+  font-size: 45px;
+  background-color: blueviolet;
+  margin-bottom: 50px;
+}
+
+#cartas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#conten {
+  margin-right: 15px;
+  width: 400px;
+  height: 550px;
+}
+
+span  {
+  color: blueviolet;
+  font-size: 15px;
+}

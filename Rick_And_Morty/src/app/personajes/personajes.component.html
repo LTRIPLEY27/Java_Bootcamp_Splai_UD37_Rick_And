@@ -1,19 +1,21 @@
 <p>personajes works!</p>
 <main>
+  <p id="title">Listado de Personajes de Rick and Morty</p>
   <!--DIRECTIVA NG-->
-  <div *ngIf="personajes != null; else error">
-    <div class="card" style="width: 18rem;" *ngFor="let item of personajes">
+  <div id="cartas"  *ngIf="personajes != null; else error" >
+    <div id="conten" class="card" *ngFor="let item of personajes">
       <img class="card-img-top" src= {{item.image}} alt="rick" >
       <div class="card-body">
         <ul>
-          <li class="card-text">{{item.id}}</li>
-          <li class="card-text">{{item.name}}</li>
-          <li class="card-text">{{item.status}}</li>
-          <li class="card-text">{{item.species}}</li>
-          <li class="card-text">{{item.gender}}</li>
-          <li class="card-text">{{item.origin}}</li>
-          <li class="card-text">{{item.location}}</li>
+          <li class="card-text"><span>Número : </span> {{item.id}}</li>
+          <li class="card-text"><span>Nombre : </span> {{item.name}}</li>
+          <li class="card-text"><span>Estado : </span> {{item.status}}</li>
+          <li class="card-text"><span>Especie : </span> {{item.species}}</li>
+          <li class="card-text"><span>Género : </span> {{item.gender}}</li>
+          <li class="card-text"><span>Origen : </span> {{item.origin}}</li>
+          <li class="card-text"><span>Locación : </span> {{item.location}}</li>
         </ul>
+        <button class="btn btn-danger">Ver más</button>
       </div>
     </div>
   </div>
