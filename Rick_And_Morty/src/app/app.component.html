@@ -1,0 +1,9 @@
+<!--INDEXACIÓN DEL ROUTING PARA CARGAR LOS COMPONENTES HIJO-->
+<div style="text-align: center;">
+  <a routerLink="/personajes"> Personajes </a> <!--DIRECCIONA CON EL ENDPOINT AL COMPONENTE PERSONAJES-->
+  <a routerLink="/bio"> Sobre Nosotros</a>
+
+  <div>
+    <router-outlet></router-outlet><!--LO IMPRESCINDIBLE ES EL INCRUSTAMIENTOS DE LA ETIQUETA ROUTER-OUTLET PARA QUE HAGA EL LLAMADO A ESOS ENDPOINTS-->
+  </div>
+</div>
