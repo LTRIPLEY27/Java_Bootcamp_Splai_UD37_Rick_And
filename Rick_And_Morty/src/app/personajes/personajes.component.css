@@ -1,10 +1,7 @@
-.body {
-  height: auto 0px;
-  width: auto 0px;
+body{
+  margin: auto 0px;
 }
-
 main {
-  background-color: black;
   padding: 10%;
 }
 
