@@ -2,7 +2,7 @@ body{
   margin: auto 0px;
 }
 main {
-  padding: 10%;
+  padding: 5%;
 }
 
 #title {
@@ -17,15 +17,22 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 #conten {
   margin-right: 15px;
   width: 400px;
-  height: 550px;
+  height: 580px;
+  padding-bottom: 50px;
 }
 
 span  {
   color: blueviolet;
   font-size: 15px;
+}
+
+#boton  {
+  margin: 20px;
+  width: 75%;
 }
