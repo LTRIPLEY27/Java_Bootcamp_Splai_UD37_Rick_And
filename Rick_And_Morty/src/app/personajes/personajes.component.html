@@ -1,1 +1,21 @@
 <p>personajes works!</p>
+<main>
+  <!--DIRECTIVA NG-->
+  <div *ngIf="personajes != null; else error">
+    <div class="card" style="width: 18rem;" *ngFor="let item of personajes">
+      <img class="card-img-top" src= {{item.image}} alt="rick" >
+      <div class="card-body">
+        <ul>
+          <li class="card-text">{{item.id}}</li>
+          <li class="card-text">{{item.name}}</li>
+          <li class="card-text">{{item.status}}</li>
+          <li class="card-text">{{item.species}}</li>
+          <li class="card-text">{{item.gender}}</li>
+          <li class="card-text">{{item.origin}}</li>
+          <li class="card-text">{{item.location}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ng-template #error>Error de datos</ng-template> <!--RETORNA EL ELSE CON EL 'ng-template' y la etiqueta que le definicmos en el else-->
+</main>
