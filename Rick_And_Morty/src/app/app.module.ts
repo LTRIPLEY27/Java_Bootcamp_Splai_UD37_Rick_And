@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PersonajeComponent } from './personajes/personaje/personaje.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PersonajeComponent } from './personajes/personaje/personaje.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule //IMPORTACIÓN DEL MÓDULO HTTPCLIENT
   ],
   providers: [],
   bootstrap: [AppComponent]
