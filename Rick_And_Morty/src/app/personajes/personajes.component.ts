@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 //IMPORTS IMPRESCINDIBLES
 
 
@@ -7,67 +8,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './personajes.component.html',
   styleUrls: ['./personajes.component.css']
 })
+
+@Injectable({
+  providedIn : 'root' // INYECCIÓN DEL SERVICES
+})
+
 export class PersonajesComponent implements OnInit {
 
   //definición del jason para carga de los personajes
 //ATRIBUTOS
+personajes : any = null;
 
-// CARGA DEL ARCHIVO JSON
-  personajes = [
-    {
-      "id": 1,
-      "name": "Rick Sanchez",
-      "status": "Alive",
-      "species": "Human",
-      "gender": "Male",
-      "origin": "Earth",
-      "location": "Earth",
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-    },
-    {
-      "id": 2,
-      "name": "Morty Smith",
-      "status": "Alive",
-      "species": "Human",
-      "gender": "Male",
-      "origin": "Citadel of Ricks",
-      "location": "Earth",
-      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
-    },
-    {
-      "id": 3,
-      "name": "Summer Smith",
-      "status": "Alive",
-      "species": "Human",
-      "gender": "Female",
-      "origin": "Earth (Replacement Dimension)",
-      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
-    },
-    {
-      "id": 4,
-      "name": "Beth Smith",
-      "status": "Dead",
-      "species": "Human",
-      "gender": "Female",
-      "origin": "Earth (Replacement Dimension)",
-      "location": "Earth",
-      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
-    },
-    {
-      "id": 5,
-      "name": "Jerry Smith",
-      "status": "Dead",
-      "species": "Human",
-      "gender": "Male",
-      "origin": "Earth (Replacement Dimension)",
-      "location": "Earth",
-      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
-    }
-  ]
+  constructor(private http : HttpClient) { } //INYECCION DE CLIEN EN EL CONSTRUCTOR
 
-  constructor() { }
-
+  //LA LLAMADA A LA API SUSTIYE EL MÉTODO DE CARGA DEL JSON, POR LO QUE SEDE DE INDICAR EL OBJETOD HTTP DECLARADO EN EL CONSTRUCTOR CON EL MÉTODO 'GET' Y LA UBICACIÓN DEL PATH AL QUE APUNTEMOS
   ngOnInit(): void {
+    this.http.get("https://rickandmortyapi.com/api/character/1,2,3,4,5").subscribe( respuesta => this.personajes = respuesta); // AGREGACIÓN DEL MÉTODO 'SUBSCRIBE' Y LA FUNCIÓN ANIDADA PARA PASAR EL VALOR AL ATRIBUTO Y OBTENER LA RESPUESTA DE CADA ITERACIÓN DEL JSON
   }
 
 }
