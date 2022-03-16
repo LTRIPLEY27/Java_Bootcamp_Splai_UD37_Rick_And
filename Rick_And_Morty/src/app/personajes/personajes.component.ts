@@ -1,5 +1,5 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { PersonajesService } from '../personajes.service';
 //IMPORTS IMPRESCINDIBLES
 
 
@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 @Injectable({
-  providedIn : 'root' // INYECCIÓN DEL SERVICES
+  providedIn : 'root' // INYECCIÓN DEL SERVICES para hacer llamado a su método
 })
 
 export class PersonajesComponent implements OnInit {
@@ -19,11 +19,11 @@ export class PersonajesComponent implements OnInit {
 //ATRIBUTOS
 personajes : any = null;
 
-  constructor(private http : HttpClient) { } //INYECCION DE CLIEN EN EL CONSTRUCTOR
+  constructor(private personjesServices : PersonajesService) { } //INYECCION DE CLIEN EN EL CONSTRUCTOR
 
-  //LA LLAMADA A LA API SUSTIYE EL MÉTODO DE CARGA DEL JSON, POR LO QUE SEDE DE INDICAR EL OBJETOD HTTP DECLARADO EN EL CONSTRUCTOR CON EL MÉTODO 'GET' Y LA UBICACIÓN DEL PATH AL QUE APUNTEMOS
+  //LA LLAMADA A LA API SUSTIYE EL MÉTODO DE CARGA DEL OBJETO SERVICES, POR LO QUE SE DEBE DE INDICAR EL OBJETOD SERVICES DECLARADO EN EL CONSTRUCTOR CON EL MÉTODO 'GET' Y 'SUBSCRIBE' Y LA UBICACIÓN DEL PATH AL QUE APUNTEMOS
   ngOnInit(): void {
-    this.http.get("https://rickandmortyapi.com/api/character/1,2,3,4,5").subscribe( respuesta => this.personajes = respuesta); // AGREGACIÓN DEL MÉTODO 'SUBSCRIBE' Y LA FUNCIÓN ANIDADA PARA PASAR EL VALOR AL ATRIBUTO Y OBTENER LA RESPUESTA DE CADA ITERACIÓN DEL JSON
+    this.personjesServices.retorna().subscribe( respuesta => this.personajes = respuesta); // AGREGACIÓN DEL MÉTODO 'SUBSCRIBE' Y LA FUNCIÓN ANIDADA PARA PASAR EL VALOR AL ATRIBUTO Y OBTENER LA RESPUESTA DE CADA ITERACIÓN DEL JSON
   }
 
 }
