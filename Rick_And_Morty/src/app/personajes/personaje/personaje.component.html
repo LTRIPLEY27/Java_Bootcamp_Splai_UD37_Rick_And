@@ -1,1 +1,14 @@
-<p>personaje works!</p>
+<main>
+  <p>Personaje</p>
+  <div>
+    <img class="card-img-top" src= {{personaje.image}} alt="morty" >
+    <div class="card-body">
+      <h1>{{personaje.name}}</h1>
+      <p class="card-text">
+        Estado : {{personaje.status}}
+        Especie : {{personaje.species}}
+      </p>
+    </div>
+  </div>
+  <a [routerLink]="['/personajes']" class="btn btn-danger">Volver</a>
+</main>
