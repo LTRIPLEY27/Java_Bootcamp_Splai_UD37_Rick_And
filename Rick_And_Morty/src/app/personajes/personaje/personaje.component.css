@@ -4,15 +4,40 @@ body{
 }
 
 main{
-  background-color: bisque;
+  background-color: rgb(90, 89, 87);
   margin: 10%;
-  align-items: center;
+  align-content: center;
   border-radius: 25px;
   padding-bottom: 50px;
 }
 
 img {
-  margin: 20%;
+  image-orientation: center;
   width: 30%;
   height: 30%;
+  margin-left: 35%;
+  border-radius: 15px;
+}
+
+p {
+  padding: 50px;
+  text-align: center;
+  font-family: 'Courier New';
+  color: rgb(246, 248, 250);
+}
+
+#person {
+  font-size: 45px;
+}
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Courier New';
+}
+
+a{
+  width: 150px;
+  margin-left: 44%;
+  font-size: 25px;
 }

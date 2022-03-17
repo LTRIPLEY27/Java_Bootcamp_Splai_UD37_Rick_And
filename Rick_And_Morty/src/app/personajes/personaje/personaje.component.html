@@ -1,14 +1,15 @@
 <main>
-  <p>Personaje</p>
+  <p id="person">Personaje</p>
   <div>
     <img class="card-img-top" src= {{personaje.image}} alt="morty" >
     <div class="card-body">
       <h1>{{personaje.name}}</h1>
-      <p class="card-text">
+      <p id ="tarjeta" class="card-text">
         Estado : {{personaje.status}} <br>
         Especie : {{personaje.species}} <br>
-        Género: {{personaje.status}} <br>
-        Origen: {{personaje.location.name | json}} <br> <!--ADICIÓN DEL PIPES para llamar únicamente a la posición '0' del arry de origenes-->
+        Género: {{personaje.gender}} <br>
+        Origen: {{personaje.origin.name | json}} <br> <!--ADICIÓN DEL PIPES para llamar únicamente a la posición '0' del arry de origenes-->
+        Locación: {{personaje.location.name | json}} <br>
       </p>
     </div>
   </div>

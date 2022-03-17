@@ -23,16 +23,21 @@ main {
 #conten {
   margin-right: 15px;
   width: 400px;
-  height: 580px;
+  height: 530px;
   padding-bottom: 50px;
+  background-color: rgb(34, 33, 33);
 }
 
 span  {
-  color: blueviolet;
-  font-size: 15px;
+  color: rgb(136, 129, 143);
+  font-size: 20px;
 }
 
 #boton  {
   margin: 20px;
   width: 75%;
+}
+
+li {
+  color: antiquewhite;
 }
