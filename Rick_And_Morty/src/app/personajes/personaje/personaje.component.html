@@ -5,8 +5,10 @@
     <div class="card-body">
       <h1>{{personaje.name}}</h1>
       <p class="card-text">
-        Estado : {{personaje.status}}
-        Especie : {{personaje.species}}
+        Estado : {{personaje.status}} <br>
+        Especie : {{personaje.species}} <br>
+        Género: {{personaje.status}} <br>
+        Origen: {{personaje.location.name | json}} <br> <!--ADICIÓN DEL PIPES para llamar únicamente a la posición '0' del arry de origenes-->
       </p>
     </div>
   </div>
