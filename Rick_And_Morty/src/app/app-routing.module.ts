@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { BusquedaComponent } from './formulario/busqueda/busqueda.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { PersonajeComponent } from './personajes/personaje/personaje.component';
 import { PersonajesComponent } from './personajes/personajes.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path : 'formulario',
     component : FormularioComponent // INCLUSIÓN DEL NUEVO COMPONENTE FORMULARIO
+  },
+  {
+    path : 'busqueda',
+    component : BusquedaComponent // INCLUSION DE NUEVO COMPONENT BÚSQUEDA
   }
 ];
 
