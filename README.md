@@ -52,4 +52,36 @@ Ejemplo de diseño:
 
 
 
+                                                          EDIT : SEGUNDA EDICIÓN DEL PRINCIPAL
+                                                          
+                                                          
+                                                          
+- Enunciado : Agregar un componente indexado al de personajes, que al clicar sobre la tarjeta del mismo, nos envie al componente nuevo con la ubicación por ID del personaje y viceversa.
+
+
+
+                                                             COMPONENTE : PERSONAJE (NUEVO)
+                                                                  
+                                                                  
+  
+  ![image](https://user-images.githubusercontent.com/36207623/158885155-89ed5471-8899-4e4d-8500-8edff5954066.png)
+  
+  
+  - Path específico desde la url :
+
+
+![image](https://user-images.githubusercontent.com/36207623/158885320-951370ad-4d57-45cf-a961-8bebf3fd694e.png)
+
+
+
+                                                            REDISEÑO DE COMPONENTES ANTIGUOS
+                                                            
+                                                            
+ ![image](https://user-images.githubusercontent.com/36207623/158885514-699a4cfc-f1e5-4a4e-9866-6559ace80438.png)
+
+
+
+
+
+
                                                                
