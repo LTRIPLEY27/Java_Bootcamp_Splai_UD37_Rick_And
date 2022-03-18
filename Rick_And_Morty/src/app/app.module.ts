@@ -7,13 +7,15 @@ import { PersonajesComponent } from './personajes/personajes.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PersonajeComponent } from './personajes/personaje/personaje.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonajesComponent,
     AboutUsComponent,
-    PersonajeComponent
+    PersonajeComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
