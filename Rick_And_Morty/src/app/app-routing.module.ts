@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { FormularioComponent } from './formulario/formulario.component';
 import { PersonajeComponent } from './personajes/personaje/personaje.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path : 'personajes/:id',
     component : PersonajeComponent //INCLUIMOS EL PATH DONDE ACUDIRÁ AL PRESIONAR EL BOTON PARA DAR DETALLE A CADA PERSONAJE
+  },
+  {
+    path : 'formulario',
+    component : FormularioComponent // INCLUSIÓN DEL NUEVO COMPONENTE FORMULARIO
   }
 ];
 
