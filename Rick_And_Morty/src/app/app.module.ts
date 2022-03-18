@@ -8,6 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { PersonajeComponent } from './personajes/personaje/personaje.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './formulario/formulario.component';
+import { BusquedaComponent } from './formulario/busqueda/busqueda.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormularioComponent } from './formulario/formulario.component';
     PersonajesComponent,
     AboutUsComponent,
     PersonajeComponent,
-    FormularioComponent
+    FormularioComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,
