@@ -17,23 +17,23 @@
       <div *ngIf="!submitted"> <!--CONDICIONAL ANIDADO PARA SABER SI SE AGREGA O NO UN NIEVO VALOR-->
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">Nombre : </label>
-            <input type="text" class="form-control" id="name" placeholder="Nombre">
+            <input type="text" class="form-control" id="name" placeholder="Nombre" required [(ngModel)] = "personajes.name" >
           </div>
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">Estado : </label>
-            <input type="text" class="form-control" id="name" placeholder="Estado">
+            <input type="text" class="form-control" id="name" placeholder="Estado" required [(ngModel)] = "personajes.status">
           </div>
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">Especie : </label>
-            <input type="text" class="form-control" id="name" placeholder="Especie">
+            <input type="text" class="form-control" id="name" placeholder="Especie" required [(ngModel)] = "personajes.species">
           </div>
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">Género : </label>
-            <input type="text" class="form-control" id="name" placeholder="Género">
+            <input type="text" class="form-control" id="name" placeholder="Género" required [(ngModel)] = "personajes.gender">
           </div>
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">Origen : </label>
-            <input type="text" class="form-control" id="name" placeholder="Origen">
+            <input type="text" class="form-control" id="name" placeholder="Origen" required [(ngModel)] = "personajes.origin">
           </div>
           <button (click)="agrega()" class="btn btn-danger" type="button" >Subir</button>
 

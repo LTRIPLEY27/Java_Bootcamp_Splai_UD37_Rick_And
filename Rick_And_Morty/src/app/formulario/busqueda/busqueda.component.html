@@ -15,11 +15,22 @@
         <div class="box">
           <div class="container">
             <span class="icon"><i class="fa fa-search"></i> </span>
-            <input type="search" id="busqueda" placeholder="Búsqueda por nombre">
+            <input type="search" id="busqueda" placeholder="Búsqueda por nombre" [(ngModel)]="name" />
             <button class="btn btn-danger" type="button">Search</button>
           </div>
         </div>
 
+        <div>
+          <h3>Personaje detalle</h3>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let person of personajes; let 1 = index" [class.active] = "1 == personajeIndex" (click) = "setPersonajeActivo(personaje, 1)">
+              {{ person.name }}
+
+            </li>
+          </ul>
+
+          <button class="m-3 btn-sm btn-danger" (click)="eliminaTodosPersonajes()">Eliminar todo</button>
+        </div>
     <div>
       <router-outlet></router-outlet><!--LO IMPRESCINDIBLE ES EL INCRUSTAMIENTOS DE LA ETIQUETA ROUTER-OUTLET PARA QUE HAGA EL LLAMADO A ESOS ENDPOINTS-->
     </div>

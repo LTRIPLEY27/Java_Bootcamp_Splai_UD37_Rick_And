@@ -9,6 +9,7 @@ import { PersonajeComponent } from './personajes/personaje/personaje.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BusquedaComponent } from './formulario/busqueda/busqueda.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BusquedaComponent } from './formulario/busqueda/busqueda.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule //IMPORTACIÓN DEL MÓDULO HTTPCLIENT
   ],
   providers: [],

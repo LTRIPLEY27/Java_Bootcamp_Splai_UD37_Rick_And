@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //importaciones
 import { ActivatedRoute } from '@angular/router'; //ENRUTA CON EL BOTON
-import { PersonajesService } from 'src/app/personajes.service'; //LLAMA AL SERVICES PARA USO DEL MÉTODO
+import { PersonajesService } from 'src/app/services/personajes.service'; //LLAMA AL SERVICES PARA USO DEL MÉTODO
 
 @Component({
   selector: 'app-personaje',
