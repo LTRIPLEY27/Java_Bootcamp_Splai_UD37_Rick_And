@@ -18,68 +18,63 @@ export class PersonajesComponent implements OnInit {
 
   //definición del jason para carga de los personajes
 //ATRIBUTOS
-personajes? : Personajes[];
-personajeActual : Personajes = {};
-personajeIndex = -1;
-name = '';
 
-  constructor(private personajeServices : PersonajesService) { } //INYECCION DE CLIEN EN EL CONSTRUCTOR
 
-  //LA LLAMADA A LA API SUSTIYE EL MÉTODO DE CARGA DEL OBJETO SERVICES, POR LO QUE SE DEBE DE INDICAR EL OBJETOD SERVICES DECLARADO EN EL CONSTRUCTOR CON EL MÉTODO 'GET' Y 'SUBSCRIBE' Y LA UBICACIÓN DEL PATH AL QUE APUNTEMOS
-  ngOnInit(): void {
-    this.retorna();
-  }
+personajes : any =  [
+             {
+                "id": 1,
+                "name": "Rick Sanchez",
+                "status": "Alive",
+                "species": "Human",
+                "gender": "Male",
+                "origin": "Earth",
+                "location": "Earth",
+                "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+              },
+              {
+                "id": 2,
+                "name": "Morty Smith",
+                "status": "Alive",
+                "species": "Human",
+                "gender": "Male",
+                "origin": "Citadel of Ricks",
+                "location": "Earth",
+                "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+              },
+              {
+                "id": 3,
+                "name": "Summer Smith",
+                "status": "Alive",
+                "species": "Human",
+                "gender": "Female",
+                "origin": "Earth (Replacement Dimension)",
+                "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+              },
+              {
+                "id": 4,
+                "name": "Beth Smith",
+                "status": "Dead",
+                "species": "Human",
+                "gender": "Female",
+                "origin": "Earth (Replacement Dimension)",
+                "location": "Earth",
+                "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+              },
+              {
+                "id": 5,
+                "name": "Jerry Smith",
+                "status": "Dead",
+                "species": "Human",
+                "gender": "Male",
+                "origin": "Earth (Replacement Dimension)",
+                "location": "Earth",
+                "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+              }
+            ]
 
-  retorna() : void {
-    this.personajeServices.retorna()
-      .subscribe(
-        data => {
-          this.personajes = data; //LA VARIABLE RECIBE EL VALOR DE LA CONSTANTE PREVIAMENTE DEFINIDA
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        }
-      );
-  }
+      constructor() {}
 
-  actualizaLista() : void {
-    this.retorna();
-    this.personajeActual = {};
-    this.personajeIndex = -1; //ADJUNTA Y ACTUALIZA INDICES POR CADA NUEVO PERSONAJE
-  }
+      ngOnInit(): void {
+      }
 
-  setPersonajeActivo(personajes : Personajes, index : number) : void {
-    this.personajeActual = personajes;
-    this.personajeIndex = index;
-  }
-
-  eliminaTodosPersonajes() : void {
-    this.personajeServices.eliminaTodo()
-      .subscribe(
-        response => {
-          console.log(response);
-          this.actualizaLista();
-        },
-        error => {
-          console.log(error);
-        }
-      );
-  }
-
-  buscaNombre() : void {
-    this.personajeActual = {};
-    this.personajeIndex = -1;
-
-    this.personajeServices.ubicaPorNombre(this.name)
-      .subscribe(
-        data => {
-          this.personajes = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        }
-      );
-  }
 }

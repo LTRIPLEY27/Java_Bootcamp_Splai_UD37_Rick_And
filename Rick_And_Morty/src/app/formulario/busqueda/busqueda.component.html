@@ -16,20 +16,44 @@
           <div class="container">
             <span class="icon"><i class="fa fa-search"></i> </span>
             <input type="search" id="busqueda" placeholder="Búsqueda por nombre" [(ngModel)]="name" />
-            <button class="btn btn-danger" type="button">Search</button>
+            <button class="btn btn-danger" type="button" (click)="buscaNombre()">Search</button>
           </div>
         </div>
 
         <div>
           <h3>Personaje detalle</h3>
           <ul class="list-group">
-            <li class="list-group-item" *ngFor="let person of personajes; let 1 = index" [class.active] = "1 == personajeIndex" (click) = "setPersonajeActivo(personaje, 1)">
+            <li class="list-group-item" *ngFor="let person of personajes; let i = index" [class.active] = "i == personajeIndex" (click) = "setPersonajeActivo(person, i)">
               {{ person.name }}
 
             </li>
           </ul>
 
           <button class="m-3 btn-sm btn-danger" (click)="eliminaTodosPersonajes()">Eliminar todo</button>
+        </div>
+
+        <div class="col-md-6">
+          <div *ngIf="personajeActual.id"> <!--LLAMADO AL OBJETO POR ID ESPECÍFICA-->
+            <h3>Personaje</h3>
+            <div>
+              <label><b>Nombre : </b></label> {{personajeActual.name}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+            </div>
+            <div>
+              <label><b>Estado : </b></label> {{personajeActual.status}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+            </div>
+            <div>
+              <label><b>Especie : </b></label> {{personajeActual.species}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+            </div>
+            <div>
+              <label><b>Género : </b></label> {{personajeActual.gender}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+            </div>
+            <div>
+              <label><b>Origen : </b></label> {{personajeActual.origin}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+            </div>
+            <div>
+              <img src="{{personajeActual.status}}" alt=""> <!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+            </div>
+          </div>
         </div>
     <div>
       <router-outlet></router-outlet><!--LO IMPRESCINDIBLE ES EL INCRUSTAMIENTOS DE LA ETIQUETA ROUTER-OUTLET PARA QUE HAGA EL LLAMADO A ESOS ENDPOINTS-->
