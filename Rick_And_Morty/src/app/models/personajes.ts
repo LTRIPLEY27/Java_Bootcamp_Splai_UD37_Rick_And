@@ -2,7 +2,7 @@
 export class Personajes {
   id?: any;
   name? : string;
-  status? : boolean; //SE PODRÁ CAMBIAR A VIVO O MUERTO
+  status? : string; //SE PODRÁ CAMBIAR A VIVO O MUERTO
   species? : string;
   gender? : string;
   origin? : string;

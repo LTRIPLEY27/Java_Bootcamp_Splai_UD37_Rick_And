@@ -12,6 +12,7 @@
       </div>
     </nav>
         <p>Búsqueda de personajes</p>
+  <div class="list row">
         <div class="box">
           <div class="container">
             <span class="icon"><i class="fa fa-search"></i> </span>
@@ -20,7 +21,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="col-md-6">
           <h3>Personaje detalle</h3>
           <ul class="list-group">
             <li class="list-group-item" *ngFor="let person of personajes; let i = index" [class.active] = "i == personajeIndex" (click) = "setPersonajeActivo(person, i)">
@@ -39,7 +40,7 @@
               <label><b>Nombre : </b></label> {{personajeActual.name}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
             </div>
             <div>
-              <label><b>Estado : </b></label> {{personajeActual.status}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
+              <label><b>Estado : </b></label> {{personajeActual.status ? "dead" : "alive"}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
             </div>
             <div>
               <label><b>Especie : </b></label> {{personajeActual.species}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
@@ -50,12 +51,19 @@
             <div>
               <label><b>Origen : </b></label> {{personajeActual.origin}}<!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
             </div>
-            <div>
-              <img src="{{personajeActual.status}}" alt=""> <!--RETORNO DE CADA VALOR POR ESA UBICACIÓN-->
-            </div>
+           <!-- <div>
+              <img src="{{personajeActual.img}}" alt="personaje"> RETORNO DE CADA VALOR POR ESA UBICACIÓN
+            </div>-->
+
+            <a class="badge badge-warning" routerLink="/personajes/{{ personajeActual.id }}">Editar</a>
+          </div>
+
+          <div *ngIf="!personajeActual">
+            <br/>
+            <p>Escoja un personaje</p>
           </div>
         </div>
-    <div>
-      <router-outlet></router-outlet><!--LO IMPRESCINDIBLE ES EL INCRUSTAMIENTOS DE LA ETIQUETA ROUTER-OUTLET PARA QUE HAGA EL LLAMADO A ESOS ENDPOINTS-->
-    </div>
-  </main>
+
+
+  </div>
+</main>

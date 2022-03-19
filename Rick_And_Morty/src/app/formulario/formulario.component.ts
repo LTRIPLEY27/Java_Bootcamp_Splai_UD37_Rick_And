@@ -13,7 +13,7 @@ export class FormularioComponent implements OnInit {
   //DEFINICIÓN DEL OBJETO
   personajes : Personajes = {
     name : '',
-    status : false,
+    status : '',
     species : '',
     gender : '',
     origin : '',
@@ -33,6 +33,7 @@ export class FormularioComponent implements OnInit {
   guardaPersonaje() : void {
     const data = { //EN PRIMERA INSTANCIA LE ADJUMOS LOS VALOES A LAS VARIABLES
       name : this.personajes.name,
+      staus : this.personajes.status,
       species : this.personajes.species,
       gender : this.personajes.gender,
       origin : this.personajes.origin,
@@ -56,7 +57,7 @@ export class FormularioComponent implements OnInit {
     this.submitted = false;
     this.personajes = {
       name : '',
-      status : false,
+      status : '',
       species : '',
       gender : '',
       origin : '',
