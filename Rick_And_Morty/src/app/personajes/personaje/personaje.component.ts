@@ -13,6 +13,7 @@ import { PersonajesService } from 'src/app/services/personajes.service'; //LLAMA
 export class PersonajeComponent implements OnInit {
 
   personajeActual: Personajes = {
+    id : 0,
     name : '',
     status : '',
     species : '',

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 
 // LA CONSTANTE APUNTARÁ A NUESTRO LOCALHOST
-const baseUrl = 'http://localhost:3000/characters';
+const baseUrl = 'http://localhost:3000/personajes';
 
 @Injectable({
   providedIn: 'root'
