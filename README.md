@@ -2,7 +2,7 @@
 
 @Author :  Isabel Calzadilla
 
-UD37 : Inicio de API con interfaz gráfica de Rick and Morty
+UD37-38-41 : Inicio de API con interfaz gráfica de Rick and Morty
 
 
 
@@ -82,6 +82,41 @@ Ejemplo de diseño:
 
 
 
+                                                           EDIT : TERCERA EDICIÓN DEL PRINCIPAL
+                                                          
+                                                          
+                                                          
+- Enunciado : CRUD Rick & Morty Frontend App
 
 
-                                                               
+Por medio de una aplicación de Angular realizar el CRUD completo a un clon de la API de Rick y Morty https://rickandmortyapi.com/ , utiliza faker para la creación del servidor de datos. En ella se ha de mostrar la información de varios personajes en tu vista web. Puedes utilizar la aplicación realizada en el ejercicio anterior para realizar el evolutivo. Como base de datos has de utilizar el documento database.json adjunto.
+
+Añade los enlaces en la parte superior de la página (puedes utilizar un navbar):
+
+acceso a la pantalla de bienvenida (Home). 
+listado de personajes aleatorio. 
+about us. 
+vista detalle de personaje.
+formulario que te permita añadir un nuevo personaje a la lista. 
+Configura correctamente el sistema de enrutado de angular.
+
+
+
+                                                             COMPONENTE : FORMULARIO (NUEVO)
+
+ 
+ ![image](https://user-images.githubusercontent.com/36207623/159171173-bc39fd6c-43d7-4394-9f3d-f175f6908b7b.png)
+
+
+
+                                                             COMPONENTE : BÚSQUEDA DE PERSONAJES (NUEVO)
+                                                             
+                                                             
+ ![image](https://user-images.githubusercontent.com/36207623/159171222-9c0dc360-f744-45e0-9713-f03f5a734cea.png)
+
+
+                                          ADICIÓN EN LA LISTA DE PERSONAJES DE LOS PERSONAJES CREADOS EN EL FORMULARIO
+                                          
+                                          
+  ![image](https://user-images.githubusercontent.com/36207623/159171267-8618eed5-00a2-43e4-ae51-f0dd051b02cd.png)
+                                        
