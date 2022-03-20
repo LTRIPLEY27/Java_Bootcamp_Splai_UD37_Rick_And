@@ -1,7 +1,9 @@
 <main>
   <div>
-    <div *ngIf="personajes.id" class="edit-form">
-      <h3>Personaje</h3>
+    <p>Personaje</p>
+      <img src="{{ personajes.image }}" alt="">
+    <div *ngIf="personajes.id" class="edit-form" id="edit">
+
       <form>
         <div class="form-group">
           <label for="nombre">Nombre</label>
