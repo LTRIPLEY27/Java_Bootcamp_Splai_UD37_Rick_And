@@ -13,7 +13,7 @@
     </nav>
 
     <p>Personaje</p>
-    <div class="submit-form">
+    <div class="submit-form" id="submit">
       <div *ngIf="!submitted"> <!--CONDICIONAL ANIDADO PARA SABER SI SE AGREGA O NO UN NIEVO VALOR-->
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">id : </label>
@@ -39,15 +39,13 @@
             <label for="name" class="form-label">Origen : </label>
             <input type="text" class="form-control" id="name" placeholder="Origen" required [(ngModel)] = "personajes.origin">
           </div>
-          <div class="mb-3 mt-3">
-            <label for="name" class="form-label">Imagen : </label>
-            <input type="text" class="form-control" id="imagen" placeholder="imagen" required [(ngModel)] = "personajes.image">
-          </div>
+
           <button (click)="guardaPersonaje()" class="btn btn-danger" type="button" >Subir</button>
 
       </div>
         <!--CONDICIONAL DERIVADO DEL ANTERIOR IF-->
         <div *ngIf="submitted">
+          <p>Personaje Agregado con Exito</p>
           <button class="btn btn-danger" (click)="guardaPersonaje()">Agrega</button>
         </div>
     </div>

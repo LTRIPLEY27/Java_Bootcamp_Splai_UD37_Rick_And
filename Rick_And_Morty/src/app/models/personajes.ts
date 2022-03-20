@@ -7,5 +7,5 @@ export class Personajes {
   gender? : string;
   origin? : string;
   location? : string;
-  image? : string;
+  image : string = "https://rickandmortyapi.com/api/character/avatar/183.jpeg";
 }

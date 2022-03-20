@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="left">
           <h3>Personaje detalle</h3>
           <ul class="list-group">
             <li class="list-group-item" *ngFor="let person of personajes; let i = index" [class.active] = "i == personajeIndex" (click) = "setPersonajeActivo(person, i)">
@@ -33,7 +33,7 @@
           <button class="m-3 btn-sm btn-danger" (click)="eliminaTodosPersonajes()">Eliminar todo</button>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="right">
           <div *ngIf="personajeActual.id"> <!--LLAMADO AL OBJETO POR ID ESPECÍFICA-->
             <h3>Personaje</h3>
             <div>

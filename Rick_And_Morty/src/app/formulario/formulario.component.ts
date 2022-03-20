@@ -12,7 +12,7 @@ export class FormularioComponent implements OnInit {
 
   //DEFINICIÓN DEL OBJETO
   personajes : Personajes = {
-    id : 0,
+    id : '',
     name : '',
     status : '',
     species : '',
@@ -40,7 +40,7 @@ export class FormularioComponent implements OnInit {
       gender : this.personajes.gender,
       origin : this.personajes.origin,
       location : this.personajes.location,
-      image : this.personajes.image
+      image : "https://rickandmortyapi.com/api/character/avatar/183.jpeg"
     };
 
     this.personajeServices.agrega(data)
@@ -66,7 +66,7 @@ export class FormularioComponent implements OnInit {
       gender : '',
       origin : '',
       location : '',
-      image : ''
+      image : "https://rickandmortyapi.com/api/character/avatar/183.jpeg"
     };
   }
 

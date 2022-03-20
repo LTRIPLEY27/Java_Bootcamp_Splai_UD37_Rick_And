@@ -7,3 +7,26 @@ main{
   padding-bottom: 50px;
 }
 
+
+p {
+  padding: 50px;
+  text-align: center;
+  font-family: 'Courier New';
+  font-size: 50px;
+  color: rgb(246, 248, 250);
+}
+
+#submit {
+  width: 450px;
+  margin-left: 420px;
+}
+
+button {
+  width: 100%;
+  padding-top: 20px;
+}
+
+label {
+  font-size: 25px;
+  color: aliceblue;
+}
