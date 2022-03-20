@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConnectableObservable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Personajes } from '../models/personajes';
 import { PersonajesService } from '../services/personajes.service';
 
@@ -66,7 +66,7 @@ export class FormularioComponent implements OnInit {
       gender : '',
       origin : '',
       location : '',
-      image : '',
+      image : ''
     };
   }
 

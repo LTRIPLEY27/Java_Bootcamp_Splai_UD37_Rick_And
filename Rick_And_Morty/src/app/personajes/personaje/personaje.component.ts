@@ -12,15 +12,8 @@ import { PersonajesService } from 'src/app/services/personajes.service'; //LLAMA
 
 export class PersonajeComponent implements OnInit {
 
-  personajeActual: Personajes = {
-    id : 0,
-    name : '',
-    status : '',
-    species : '',
-    gender : '',
-    origin : '',
-
-  }
+  personajes : any = null;
+  id : any = null;
 
   mensaje = '';
 
@@ -29,43 +22,36 @@ export class PersonajeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.mensaje = '';
-    this.getPersonaje(this.route.snapshot.params['id']); //VERIFICAR
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.personajeServices.ubicaPorID(this.id)
+      .subscribe(response => {
+        this.personajes = response
+
+      });
+         //VERIFICAR
   }
 
   //Métdo que inicia desde el constructor
 
-  getPersonaje(id : string) : void {
-    this.personajeServices.ubicaPorID(id)
-      .subscribe(
-        data => {
-          this.personajeActual = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        }
-      );
-  }
 
   //MÉTODO PARA ACTUALIZAR EL ATRIBUTO DE 'STATUS'
   actualizaEstado(status : string) : void {
     const data = {
-      name : this.personajeActual.name,
+      id : this.personajes.id,
+      name : this.personajes.name,
       status : status,  //ACTUALIZA EL ESTADO DE VIDA DEL PERSONAJE
-      species : this.personajeActual.species,
-      gender : this.personajeActual.gender,
-      origin : this.personajeActual.origin
+      species : this.personajes.species,
+      gender : this.personajes.gender,
+      origin : this.personajes.origin,
+      Image : this.personajes.image
     };
 
-    this.mensaje = '';
-
-    this.personajeServices.actualiza(this.personajeActual.id, data)
+    this.personajeServices.actualiza(this.personajes.id, data)
       .subscribe(
         response => {
-          this.personajeActual.status = status;
+          this.personajes.status = status;
           console.log(response);
-          this.mensaje = response.mensaje ? response.mensaje : 'estado actualizado con exito';
+
         },
         error => {
           console.log(error);
@@ -76,11 +62,11 @@ export class PersonajeComponent implements OnInit {
   //MÉTODO PARA ACTUALIZAR AL PERSONAJE AL COMPLETO
   actualizaPersonaje() : void {
     this.mensaje = '';
-    this.personajeServices.actualiza(this.personajeActual.id, this.personajeActual)
+    this.personajeServices.actualiza(this.personajes.id, this.personajes)
       .subscribe(
         response => {
           console.log(response);
-          this.mensaje = response.mensaje ? response.mensaje : 'Personaje actualizado con exito';
+          //this.mensaje = response.mensaje ? response.mensaje : 'Personaje actualizado con exito';
         },
         error => {
           console.log(error);
@@ -90,7 +76,7 @@ export class PersonajeComponent implements OnInit {
 
 
   eliminaRegistro() : void {
-    this.personajeServices.elimina(this.personajeActual.id)
+    this.personajeServices.elimina(this.personajes.id)
       .subscribe(
         response => {
           console.log(response);

@@ -31,23 +31,24 @@
       "location": "City of Ricks"
     },
     {
-      "id": 4,
-      "name": "Beth Smith",
+      "id": 5,
+      "name": "Maggie Simpson",
       "status": "Dead",
       "species": "Human",
-      "gender": "Female",
+      "gender": "female",
       "origin": "Earth (Replacement Dimension)",
-      "location": "Earth",
-      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+      "location": "City of Ricks",
+      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
     },
     {
-      "name": "Jerry Smith",
-      "status": "Dead",
-      "species": "Human",
-      "gender": "Male",
-      "origin": "Earth (Replacement Dimension)",
-      "id": 5,
-      "location": "City of Ricks"
+      "id": "23",
+      "name": "freddy",
+      "staus": "krueger",
+      "species": "infernal",
+      "gender": "male",
+      "origin": "hell",
+      "location": "",
+      "image": ""
     }
   ]
 }

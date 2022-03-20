@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 
 // LA CONSTANTE APUNTARÁ A NUESTRO LOCALHOST
-const baseUrl = 'http://localhost:3000/personajes';
+const baseUrl = 'http://localhost:3000/personajes/';
 
 @Injectable({
   providedIn: 'root'
@@ -23,31 +23,31 @@ constructor(private http : HttpClient) { }
 
   retorna() {
     //return this.http.get("https://rickandmortyapi.com/api/character/1,801,3,183,5");  ---  DERIVADO DE LA ACTIVIDAD 2 ---
-    return this.http.get<Personajes[]>(baseUrl);
+    return this.http.get(baseUrl);
   }
 
   //MÉTODO QUE OBTENDRÁ RESPUESTA DE UN ID ENVIADO POR PARÁMETROS
-  ubicaPorID(id : any) : Observable<Personajes> { //TODO REFERIRÁ A LA CLASE MEDIANTE LOS OBSERVABLES
+  ubicaPorID(id : any) { //TODO REFERIRÁ A LA CLASE MEDIANTE LOS OBSERVABLES
     return this.http.get(`${baseUrl}/${id}`);// EL ENVÍO DEL ID SE DEBE DE INCLUIS DENTRO DE LA COMILLA SIMPLE DE LADO (`), CASO CONTRARIO TORNA ERROR
   }
 
-  agrega(data : any): Observable<any> {
-    return this.http.post(baseUrl, data);
+  agrega(data : any) {
+    return this.http.post(`${baseUrl}/`, data);
   }
 
-  actualiza(id : any, data : any): Observable<any> {
+  actualiza(id : any, data : any) {
     return this.http.put(`${baseUrl}/${id}`, data);
   }
 
-  elimina(id : any) : Observable<any> {
+  elimina(id : any) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
 
-  eliminaTodo() : Observable<any> {
+  eliminaTodo(){
     return this.http.delete(baseUrl);
   }
 
-  ubicaPorNombre(name : any) : Observable <Personajes[]> {
-    return this.http.get<Personajes[]>(`${baseUrl}?name=${name}`);
+  ubicaPorNombre(name : any){
+    return this.http.get(`${baseUrl}?name=${name}`);
   }
 }

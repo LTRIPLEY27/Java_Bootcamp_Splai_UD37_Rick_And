@@ -10,8 +10,8 @@ import { PersonajesService } from 'src/app/services/personajes.service';
 export class BusquedaComponent implements OnInit {
 
   //ATRIBUTOS
-personajes? : Personajes[];
-personajeActual : Personajes = {};
+personajes : any = null;
+personajeActual : any = null;
 personajeIndex = -1;
 name = '';
 
