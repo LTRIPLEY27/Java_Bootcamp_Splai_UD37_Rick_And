@@ -7,4 +7,5 @@ export class Personajes {
   gender? : string;
   origin? : string;
   location? : string;
+  image? : string;
 }

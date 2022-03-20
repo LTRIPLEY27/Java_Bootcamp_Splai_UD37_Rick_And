@@ -24,10 +24,11 @@
       "id": 3,
       "name": "Summer Smith",
       "status": "Alive",
-      "species": "Human",
+      "species": "Alien",
       "gender": "Female",
       "origin": "Earth (Replacement Dimension)",
-      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "location": "City of Ricks"
     },
     {
       "id": 4,
@@ -45,7 +46,8 @@
       "species": "Human",
       "gender": "Male",
       "origin": "Earth (Replacement Dimension)",
-      "id": 5
+      "id": 5,
+      "location": "City of Ricks"
     }
   ]
 }

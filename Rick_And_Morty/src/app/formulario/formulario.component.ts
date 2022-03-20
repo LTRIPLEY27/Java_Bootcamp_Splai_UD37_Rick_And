@@ -12,14 +12,15 @@ export class FormularioComponent implements OnInit {
 
   //DEFINICIÓN DEL OBJETO
   personajes : Personajes = {
+    id : 0,
     name : '',
     status : '',
     species : '',
     gender : '',
     origin : '',
-    location : ''
-
-  }
+    location : '',
+    image : ''
+  };
 
   submitted = false; //SE DEFINEN EN FALSE YA QUE SOLO AL CLICKAR SE EJECUTARÁ LA ACCIÓN
 
@@ -32,12 +33,14 @@ export class FormularioComponent implements OnInit {
 
   guardaPersonaje() : void {
     const data = { //EN PRIMERA INSTANCIA LE ADJUMOS LOS VALOES A LAS VARIABLES
+      id : this.personajes.id,
       name : this.personajes.name,
       staus : this.personajes.status,
       species : this.personajes.species,
       gender : this.personajes.gender,
       origin : this.personajes.origin,
-      location : this.personajes.location
+      location : this.personajes.location,
+      image : this.personajes.image
     };
 
     this.personajeServices.agrega(data)
@@ -56,12 +59,14 @@ export class FormularioComponent implements OnInit {
   agrega() : void {
     this.submitted = false;
     this.personajes = {
+      id : '',
       name : '',
       status : '',
       species : '',
       gender : '',
       origin : '',
-      location : ''
+      location : '',
+      image : '',
     };
   }
 
