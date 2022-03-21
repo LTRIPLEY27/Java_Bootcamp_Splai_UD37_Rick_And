@@ -120,3 +120,9 @@ Configura correctamente el sistema de enrutado de angular.
                                           
   ![image](https://user-images.githubusercontent.com/36207623/159171267-8618eed5-00a2-43e4-ae51-f0dd051b02cd.png)
                                         
+                                        
+                                                    ADICIÓN EN EL PERSONAJE OPCIONES PARA ACTUALIZAR, BORRAR
+                                                    
+                                                    
+  ![image](https://user-images.githubusercontent.com/36207623/159172219-e3c6374a-4848-4cd4-8163-d5156a1c714a.png)
+                                                  
